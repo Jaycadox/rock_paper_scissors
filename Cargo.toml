@@ -1,0 +1,23 @@
+[package]
+name = "rock_paper_scissors"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+strip = true
+debug = false
+
+[dependencies]
+anyhow = "1.0.82"
+egui-macroquad = "0.15.0"
+rand = "0.8.5"
+serde = { version = "1.0.197", features = ["derive"] }
+tokio = { version = "1.37.0", features = ["full"] }
+tokio-util = "0.7.10"
+pfa = { git = "https://github.com/Jaycadox/pfa" }
+lazy_static = "1.4.0"
+
+[build-dependencies]
+pfa = { git = "https://github.com/Jaycadox/pfa" }
